@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/style.css" />
+    <title>Frontend Mentor | Tip calculator app</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="title">
+        <strong>SPLI<br />TTER</strong>
+      </div>
+      <div class="main">
+        <div class="left">
+          <div class="billing sec">
+          <label for="Bill">Bill</label>
+          <br />
+          <span class="bill inp"
+            ><img class="bill_img" src="images/icon-dollar.svg" alt="$"/>
+            <input type="text" name="bill" class="bill__input" id="bill__input" placeholder="0"
+          /></span>
+        </div>
+          <br />
+          <div class="tips sec">
+          <label for="tippercent">Select Tip %</label>
+          <br />
+          <div class="buttons">
+            <div class="btn">5%</div>
+            <div class="btn">10%</div>
+            <div class="btn">15%</div>
+          </div>
+          <div class="buttons">
+            <div class="btn">25%</div>
+            <div class="btn">50%</div>
+            <input type="text" class="btn" name="custom" id="custom" placeholder="Custom">
+          </div>
+        </div>
+        <div class="peoples sec">
+          <label for="noOfPeople">Number of People</label>
+          <br />
+          <span class="people inp">
+            <img src="images/icon-person.svg" alt="" />
+            <input type="text" name="noOfPeople" class="noOfPeople__input" id="noOfPeople__input" placeholder="0" />
+          </span>
+        </div>
+        </div>
+        <div class="right">
+          <div class="tip-amount">
+            <div class="tip__title">
+              <div class="amount-title">
+                Tip Amount
+                <div class="person">/ person</div>
+              </div>
+            </div>
+            <div class="amount money">
+              $0.00
+            </div>
+          </div>
+          <div class="total">
+            <div class="total__title">
+              <div class="total-title">Total</div>
+              <div class="person">/ person</div>
+            </div>
+            <div class="totalamount money">$0.00</div>
+          </div>
+          <div class="btn-reset">RESET</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
