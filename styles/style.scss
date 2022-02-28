@@ -8,6 +8,10 @@ body{
     padding: 0;
     margin: 0;
     font-family: var(--ff-pri);
+    overflow: hidden;
+    @media (max-width: 1000px) {
+        overflow: auto;
+    }
 }
 
 :root{
@@ -31,9 +35,15 @@ body{
 
 .container{
     background: var(--clr-light-gray-cyan);
-    min-height: 100vh;
+    min-height: 100%;
     min-width: 100%;
-    padding-bottom: 20px;
+    margin: auto;
+    padding: 2em;
+    @media (max-width:800px) {
+        padding: 0;
+        padding-top: 2em;
+        align-items: center;
+    }
 }
 
 .container .title{
@@ -42,29 +52,33 @@ body{
     font-size: 24px;
     font-weight: 500;
     color: #47696b;
-    padding-top: 12px;
-    padding-bottom: 60px;
+    margin-bottom: 5%;
 }
 
 
 .container .main{
     display: flex;
-    justify-content: center;
     flex-direction: row;
+    justify-content: center;
+    margin: auto;
     background: var(--clr-white);
-    width: 924px;
-    height: 480px;
-    margin-right: 218px;
-    margin-left: 218px;
-    padding: 36px;
-    padding-bottom: 32px;
-    padding-top: 32px;
+    width: 70%;
+    height: 70vh;
+    padding: 2em;
     border-radius: 20px;
+    @media (max-width:800px) {
+        flex-direction: column;
+        width:100%;
+        height:90%;
+    }
 }
 
 .main .left{
+    padding: 1em;
     width: 50%;
-    padding: 16px;
+    @media (max-width:800px) {
+        width:100%;
+    }
 }
 
 .left label{
@@ -72,32 +86,31 @@ body{
 }
 
 .sec {
-    padding-bottom: 28px;
+    padding-bottom: 2em;
 }
 
 .tips br{
-    margin-bottom: 20px;
+    margin-bottom: 1.5em;
 }
 
 .left .inp{
     display: block;
-    width: 380px;
+    width: 100%;
     height: 46px;
     background: var(--clr-light-gray-cyan2);
     border-radius: 5px;
     margin-top: 5px;
+    padding: 0.5em;
 }
 .left img{
     width: 12px;
-    margin-left: 12px;
 }
 .left input{
     background: none;
     border: none;
-    height: 46px;
-    width: 340px;
+    height: 1em;
+    width: 93%;
     text-align: right;
-    padding-right: 16px;
     font-size: var(--font-size-input);
     &:focus{
         outline: none;
@@ -108,12 +121,15 @@ body{
 }
 
 .main .right{
-    background: var(--clr-dark-cyan);
     width: 50%;
-    padding: 42px;
-    padding-top: 60px;
+    background: var(--clr-dark-cyan);
+    padding: 2.5em;
+    padding-top: 4em;
     color: var(--clr-pri);
     border-radius: 20px;
+    @media (max-width:800px) {
+        width:100%;
+    }
 }
 
 .amount-title,
@@ -122,18 +138,18 @@ body{
     font-weight: 700;
 }
 
-.money{
+.amount{
     color: var(--clr-pri);
-    font-size: 48px;
+    font-size: 3rem;
     font-weight: 700;
     text-align: right;
-    margin-left: 80px;
-
+    position: relative;
+    left: 25%;
 }
 
 #custom{
     background: var(--clr-light-gray-cyan2);
-    width: 115.333px;
+    width: 90%;
     height: 50px;
     border-radius: 5px;
     color: var(--clr-dark-gray-cyan);
@@ -142,11 +158,16 @@ body{
 }
 
 .tip-amount{
-    margin-bottom: 48px;
+    margin-bottom: 3em;
 }
 
 .totalamount{
-    margin-left: 100px;
+    color: var(--clr-pri);
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: right;
+    position: relative;
+    left: 31%;
 }
 
 .tip-amount {
@@ -163,15 +184,19 @@ body{
 }
 
 .buttons{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3,33%);
+    grid-gap: 0;
+    @media (max-width:800px) {
+        grid-template-columns: repeat(2,50%);
+    }
 }
 
 .btn {
     background: var(--clr-dark-cyan);
     border-radius: 5px;
-    width: 120px;
+    width: 90%;
     height: 50px;
-    margin-right: 16px;
     margin-bottom: 16px;
     text-align: center;
     color: var(--clr-light-gray-cyan2);
