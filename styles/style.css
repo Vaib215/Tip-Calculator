@@ -1,21 +1,13 @@
 *,
 *::before,
 *::after {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
   padding: 0;
   margin: 0;
   font-family: var(--ff-pri);
-  overflow: hidden;
-}
-
-@media (max-width: 1000px) {
-  body {
-    overflow: auto;
-  }
 }
 
 :root {
@@ -27,26 +19,23 @@ body {
   --clr-light-gray-cyan2: hsl(189, 41%, 97%);
   --clr-white: hsl(0, 0%, 100%);
   --font-size-input: 24px;
-  --ff-pri: 'Space Mono', monospace;
+  --ff-pri: "Space Mono", monospace;
   --mobile: 375px;
   --desktop: 1440px;
 }
 
 .container {
   background: var(--clr-light-gray-cyan);
-  min-height: 100%;
+  min-height: 100vh;
   min-width: 100%;
   margin: auto;
   padding: 2em;
 }
-
 @media (max-width: 800px) {
   .container {
     padding: 0;
     padding-top: 2em;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    align-items: center;
   }
 }
 
@@ -56,34 +45,23 @@ body {
   font-size: 24px;
   font-weight: 500;
   color: #47696b;
-  margin-bottom: 5%;
+  margin-bottom: 3%;
 }
 
 .container .main {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: row;
+  justify-content: center;
   margin: auto;
   background: var(--clr-white);
   width: 70%;
-  height: 70vh;
-  padding: 2em;
+  min-height: 70vh;
+  padding: 1.2em;
   border-radius: 20px;
 }
-
 @media (max-width: 800px) {
   .container .main {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
     width: 100%;
     height: 90%;
   }
@@ -93,7 +71,6 @@ body {
   padding: 1em;
   width: 50%;
 }
-
 @media (max-width: 800px) {
   .main .left {
     width: 100%;
@@ -113,9 +90,9 @@ body {
 }
 
 .left .inp {
-  display: block;
+  display: flex;
   width: 100%;
-  height: 46px;
+  max-height: 46px;
   background: var(--clr-light-gray-cyan2);
   border-radius: 5px;
   margin-top: 5px;
@@ -123,7 +100,8 @@ body {
 }
 
 .left img {
-  width: 12px;
+  width: 16px;
+  height: 20px;
 }
 
 .left input {
@@ -137,7 +115,6 @@ body {
   color: var(--clr-dark-gray-cyan);
   font-weight: 700;
 }
-
 .left input:focus {
   outline: none;
 }
@@ -149,8 +126,10 @@ body {
   padding-top: 4em;
   color: var(--clr-pri);
   border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
-
 @media (max-width: 800px) {
   .main .right {
     width: 100%;
@@ -169,7 +148,6 @@ body {
   font-weight: 700;
   text-align: right;
   position: relative;
-  left: 25%;
 }
 
 #custom {
@@ -183,7 +161,11 @@ body {
 }
 
 .tip-amount {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   margin-bottom: 3em;
+  width: 100%;
 }
 
 .totalamount {
@@ -192,13 +174,6 @@ body {
   font-weight: 700;
   text-align: right;
   position: relative;
-  left: 31%;
-}
-
-.tip-amount {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
 }
 
 .person {
@@ -206,24 +181,20 @@ body {
 }
 
 .total {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   margin-bottom: 80px;
 }
 
 .buttons {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (33%)[3];
-      grid-template-columns: repeat(3, 33%);
+  grid-template-columns: repeat(3, 33%);
   grid-gap: 0;
 }
-
 @media (max-width: 800px) {
   .buttons {
-    -ms-grid-columns: (50%)[2];
-        grid-template-columns: repeat(2, 50%);
+    grid-template-columns: repeat(2, 50%);
   }
 }
 
@@ -249,17 +220,13 @@ body {
   background: var(--clr-pri);
 }
 
-.peoples {
-  margin-top: -16px;
-}
-
 .selected {
   background: var(--clr-pri);
   color: var(--clr-dark-cyan);
 }
 
 .btn-reset {
-  width: 336px;
+  width: 100%;
   height: 48px;
   background: #0b686d;
   color: var(--clr-dark-cyan);
@@ -267,5 +234,4 @@ body {
   border-radius: 5px;
   text-align: center;
   padding: 4px;
-}
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
